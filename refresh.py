@@ -3,4 +3,5 @@
 from os import path, remove
 
 if path.exists('logs.txt'):
-    remove('logs.txt')
+    with open('logs.txt', 'r+') as logfile:
+        logfile.truncate(0)
